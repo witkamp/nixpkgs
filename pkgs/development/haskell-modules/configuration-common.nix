@@ -295,7 +295,7 @@ self: super: {
   persistent-zookeeper = dontCheck super.persistent-zookeeper;
   pocket-dns = dontCheck super.pocket-dns;
   postgresql-simple = dontCheck super.postgresql-simple;
-  postgrest = dontCheck super.postgrest;
+  postgrest = dontCheck (appendConfigureFlag super.postgrest "--allow-newer");
   snowball = dontCheck super.snowball;
   sophia = dontCheck super.sophia;
   test-sandbox = dontCheck super.test-sandbox;
